@@ -36,7 +36,10 @@ sudo $MANAGER -y install elementary-tweaks
 # TODO: check if its a laptop
 sudo $MANAGER -y install tlp tlp-rdw
 
-sudo $MANAGER -y install git python3 python3-pip g++ gcc vim gnome-disk-utilities winbind wine playonlinux steam xclip code ukuu
+sudo $MANAGER -y install git python3 python3-pip g++ gcc vim gnome-disk-utilities winbind wine playonlinux steam xclip code ukuu gcc-8 g++-8 clang dconf-tools
+
+# Changing the gcc/g++ to the latest
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 700 --slave /usr/bin/g++ g++ /usr/bin/g++-8
 
 # Installing python pakages
 python3 -m pip install --upgrade pip
