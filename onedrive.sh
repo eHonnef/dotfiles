@@ -15,11 +15,14 @@ if [ ! -d /var/log/onedrive ]; then
 fi
 
 # Permissions
-# sudo chown $USER /var/log/onedrive/
+sudo chown $USER /var/log/onedrive/
 
 # First run
-# $ONEDRIVE
+$ONEDRIVE
 
 # Starting onedrive service
-# systemctl --user enable $ONEDRIVE
-# systemctl --user start $ONEDRIVE
+systemctl --user enable $ONEDRIVE
+systemctl --user start $ONEDRIVE
+
+# Sync
+$ONEDRIVE --resync --download-only
