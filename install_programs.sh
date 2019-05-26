@@ -14,7 +14,7 @@ fi
 # pacman -Qqettn > packages.txt
 PACKAGES="./Packages/packages.txt"
 while IFS= read -r package; do
-  sudo $MANAGER -S --noconfirm $package
+  sudo $MANAGER -S --noconfirm --needed $package
 done <"$PACKAGES"
 
 # Enabling snapd.

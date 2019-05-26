@@ -152,8 +152,8 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 #----------------------------------------------------------------------------#
 #----------------------------------------------------------------------------#
 
-if [ -f ~/.dotfiles/sensible.bash ]; then
-	source ~/.dotfiles/sensible.bash
+if [ -f ~/.config/bash/sensible.bash ]; then
+	source ~/.config/bash/sensible.bash
 fi
 
 export PATH=~/.local/bin:$PATH
