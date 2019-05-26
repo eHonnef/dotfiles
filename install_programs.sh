@@ -12,7 +12,7 @@ fi
 
 # Native packages.
 # pacman -Qqettn > packages.txt
-PACKAGES="./packages/packages.txt"
+PACKAGES="./Packages/packages.txt"
 while IFS= read -r package; do
   sudo $MANAGER -S --noconfirm $package
 done <"$PACKAGES"
@@ -23,7 +23,7 @@ sudo systemctl enable --now snapd.socket
 # Classic snap support, needed to install vscode.
 sudo ln -s /var/lib/snapd/snap /snap
 
-PACKAGES="./packages/snapPackages.txt"
+PACKAGES="./Packages/snapPackages.txt"
 while IFS= read -r package; do
   sudo $SNAP_MANAGER install $package
 done <"$PACKAGES"
@@ -40,7 +40,7 @@ echo "Use this gist: https://gist.github.com/eHonnef/aaea5b529451bf067ce3b854e17
 
 # AUR packages.
 # pacman -Qqettm > AURpackages.txt
-PACKAGES="./packages/AURpackages.txt"
+PACKAGES="./Packages/AURpackages.txt"
 while IFS= read -r package; do
   # git clone $package
   # FOLDER="${package##*/}"
