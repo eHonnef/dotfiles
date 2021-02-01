@@ -1,5 +1,0 @@
-consolas-font
-discord
-minecraft-launcher
-stremio-beta
-vlc-nightly
