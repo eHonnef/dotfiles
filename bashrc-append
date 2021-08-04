@@ -1,0 +1,11 @@
+#----------------------------------------------------------------------------#
+# This will be appended to .bashrc
+#----------------------------------------------------------------------------#
+
+if [ -f ~/.config/bash/sensible.bash ]; then
+	source ~/.config/bash/sensible.bash
+fi
+
+PS1="[\w]> "
+
+alias timestamp='date +"[%Y-%m-%d %H:%M:%S]"'
