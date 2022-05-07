@@ -9,3 +9,4 @@ fi
 PS1="[\w]> "
 
 alias timestamp='date +"[%Y-%m-%d %H:%M:%S]"'
+alias py='python3'
