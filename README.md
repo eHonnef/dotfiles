@@ -1,7 +1,6 @@
 # Checklist of what to do after installing Fedora:
 
 - Run `sudo dnf update`
-- [Do the following](https://mutschler.eu/linux/install-guides/fedora-post-install/#btrfs-filesystem-optimizations)
 - Run the `setup.sh`
 - Install NVIDIA proprietary drivers
 - Install vscodium sync extensions
@@ -13,4 +12,3 @@
   - Tray icons: reloaded
   - Vitals
   - Workspace indicator
-

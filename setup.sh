@@ -14,8 +14,10 @@ cat "$BASHRC_APPEND" >> "$BASHRC"
 
 # Add new commands
 echo "Setting up commands"
+mkdir -p $HOME/.local/bin
 cp ./commands/calc $HOME/.local/bin/
 cp ./commands/cmd $HOME/.local/bin/
+chmod +x $HOME/.local/bin/*
 
 # Enable flatpak
 echo "Enabling flatpak"
@@ -24,9 +26,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # Enable RPM Fusion
 echo "Enabling RPMFusion"
 # Free
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+$DNF_INSTALL https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 # Non-Free
-sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+$DNF_INSTALL https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Vscodium
 echo "Adding vscodium to dnf"
@@ -37,34 +39,38 @@ sudo dnf update --refresh
 
 # Installing packages using flatpak
 echo "Installing flatpak packages"
-flatpak install easyeffects
-flatpak install jstest-gtk
-flatpak install teamspeak
-flatpak install discord
-flatpak install spotify
-flatpak install joplin
-flatpak install drawio
-flatpak install openboard
+FL_INSTALL="flatpak -y install"
+$FL_INSTALL easyeffects
+$FL_INSTALL jstest-gtk
+$FL_INSTALL teamspeak
+$FL_INSTALL discord
+$FL_INSTALL spotify
+$FL_INSTALL joplin
+$FL_INSTALL drawio
+$FL_INSTALL openboard
 
 # Installing packages using dnf
 echo "Installing dnf packages"
-sudo dnf install gnome-tweaks
-sudo dnf install steam
-sudo dnf install obs-studio
-sudo dnf install gimp
-sudo dnf install qbittorrent
-sudo dnf install git
-sudo dnf install gcc
-sudo dnf install cmake
-sudo dnf install python3
-sudo dnf install python3-pip
-sudo dnf install codium
-sudo dnf install vim
-sudo dnf install gnome-extensions-app
+DNF_INSTALL="sudo dnf -y install"
+$DNF_INSTALL gnome-tweaks
+$DNF_INSTALL steam
+$DNF_INSTALL obs-studio
+$DNF_INSTALL gimp
+$DNF_INSTALL qbittorrent
+$DNF_INSTALL git
+$DNF_INSTALL gcc
+$DNF_INSTALL cmake
+$DNF_INSTALL python3
+$DNF_INSTALL python3-pip
+$DNF_INSTALL codium
+$DNF_INSTALL vim
+$DNF_INSTALL gnome-extensions-app
+$DNF_INSTALL vlc
 
 echo "After install scripts"
 
 echo "Writting vscodium product.json"
+mkdir -p $HOME/.config/VSCodium/
 touch $HOME/.config/VSCodium/product.json
 tee -a .$HOME/.config/VSCodium/product.json << END
 {
