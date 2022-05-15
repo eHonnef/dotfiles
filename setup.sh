@@ -70,19 +70,22 @@ $DNF_INSTALL vlc
 echo "After install scripts"
 
 echo "Writting vscodium product.json"
-mkdir -p $HOME/.config/VSCodium/
-touch $HOME/.config/VSCodium/product.json
-tee -a .$HOME/.config/VSCodium/product.json << END
-{
-  "extensionsGallery": {
-    "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
-    "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
-    "itemUrl": "https://marketplace.visualstudio.com/items",
-    "controlUrl": "",
-    "recommendationsUrl": ""
+CODIUM_PATH=$HOME/.config/VSCodium
+if [ ! -f "$CODIUM_PATH/product.json" ]; then
+  mkdir -p $HOME/.config/VSCodium/
+  touch $HOME/.config/VSCodium/product.json
+  tee -a .$HOME/.config/VSCodium/product.json << END
+  {
+    "extensionsGallery": {
+      "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+      "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
+      "itemUrl": "https://marketplace.visualstudio.com/items",
+      "controlUrl": "",
+      "recommendationsUrl": ""
+    }
   }
-}
-END
+  END
+fi
 
 echo "Fixing mouse acceleration and DPI"
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
