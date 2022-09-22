@@ -2,11 +2,18 @@
 # This will be appended to .bashrc
 #----------------------------------------------------------------------------#
 
+# Sensible bash
 if [ -f ~/.config/bash/sensible.bash ]; then
 	source ~/.config/bash/sensible.bash
 fi
 
-PS1="[\w]> "
+# If you are in a git repository, append the current branch to the terminal
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+PS1="[\w][\033[01;31m\]\$(parse_git_branch)\[\033[00m\]> "
 
+# Aliases
 alias timestamp='date +"[%Y-%m-%d %H:%M:%S]"'
 alias py='python3'
+alias projects='cd projects'

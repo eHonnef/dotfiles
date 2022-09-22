@@ -64,8 +64,11 @@ $DNF_INSTALL python3
 $DNF_INSTALL python3-pip
 $DNF_INSTALL codium
 $DNF_INSTALL vim
+$DNF_INSTALL rust
 $DNF_INSTALL gnome-extensions-app
 $DNF_INSTALL vlc
+$DNF_INSTALL gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+$DNF_INSTALL lame\* --exclude=lame-devel
 
 echo "After install scripts"
 
