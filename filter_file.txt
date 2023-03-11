@@ -1,0 +1,21 @@
+- /Documents-old/
+
+- /Programs/
+
+- /Books/naruto-manga.7z
+
+- /Pictures/Tibia/
+- /Pictures/apto-athenas/
+- /Pictures/edicoes/
+- /Pictures/fotos/
+- /Pictures/fotos_para_separar.7z
+- /Pictures/minezin/
+- /Pictures/steam_prof/
+- /Pictures/vintages/
+- /Pictures/wc/
+
+- /Doc/Polo/
+- /Doc/UFSC/
+
+- *.kmy.*~
+- *.~lock.*

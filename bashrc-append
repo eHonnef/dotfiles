@@ -11,9 +11,8 @@ fi
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1="[\w][\033[01;31m\]\$(parse_git_branch)\[\033[00m\]> "
+export PS1="\[\e[00m\][\w]\[\e[91m\]\$(parse_git_branch)\[\e[00m\]> "
 
 # Aliases
 alias timestamp='date +"[%Y-%m-%d %H:%M:%S]"'
 alias py='python3'
-alias projects='cd projects'
