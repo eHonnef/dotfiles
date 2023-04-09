@@ -7,3 +7,9 @@
 - Add the secondary drive to be mounted on init
 - Install jetbrains font
 - If there is something else, be good for your future self and add to the `setup.sh` or to this readme
+
+## Import KDE stuff
+
+Install [konsave](https://github.com/Prayag2/konsave) with pip.
+
+Follow the instructions there for the `knsv` file.
