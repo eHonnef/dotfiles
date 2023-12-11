@@ -1,0 +1,22 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"C++ Snippets",
+		"CMake",
+		"Debugger",
+		"DoxyDoxygen",
+		"FileIcons",
+		"Fmt",
+		"LSP",
+		"LSP-clangd",
+		"Markdown Extended",
+		"Package Control",
+		"ProjectEnvironment",
+		"Terminus",
+	],
+	"debug": true,
+}

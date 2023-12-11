@@ -1,0 +1,22 @@
+{
+  "rules" : [
+    {
+      "selector" : "source.json",
+      "cmd" : ["jq"],
+      "format_on_save" : false,
+      "merge_type" : "diff"
+    },
+    {
+      "selector" : "source.cmake",
+      "cmd" : [ "cmake-format", "$file" ],
+      "format_on_save" : false,
+      "merge_type" : "diff"
+    },
+    {
+      "selector" : "source.c | source.c++ | source.objc | source.objc++ | source.cuda-c++",
+      "cmd" : [ "clang-format", "$file", "--style={BasedOnStyle: llvm, IndentWidth: 4, ColumnLimit: 140}" ],
+      "format_on_save" : false,
+      "merge_type" : "diff"
+    }
+  ]
+}

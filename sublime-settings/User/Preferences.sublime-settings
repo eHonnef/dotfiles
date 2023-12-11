@@ -1,0 +1,15 @@
+{
+	"theme": "Adaptive.sublime-theme",
+	"dark_theme": "Default Dark.sublime-theme",
+	"light_theme": "Default.sublime-theme",
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"dark_color_scheme": "Mariana.sublime-color-scheme",
+	"light_color_scheme": "Breakers.sublime-color-scheme",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"index_files": true,
+}
