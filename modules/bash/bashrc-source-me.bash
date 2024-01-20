@@ -21,3 +21,9 @@ alias lsalias='echo "From .bashrc: timestamp || py || sizeof"'
 
 # editor
 export EDITOR=vim
+
+# to execute a command without output and as background process
+# usage: noout COMMAND
+function noout() {
+    nohup "$@" &> /dev/null &
+}
