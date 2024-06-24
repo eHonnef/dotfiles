@@ -17,7 +17,8 @@ export PS1="\[\e[00m\][\w]\[\e[91m\]\$(parse_git_branch)\[\e[00m\]> "
 alias timestamp='date +"[%Y-%m-%d %H:%M:%S]"'
 alias py='python3'
 alias sizeof='du -hc --max-depth=0'
-alias lsalias='echo "From .bashrc: timestamp || py || sizeof"'
+alias mypc='neofetch'
+alias lsalias='echo "From .bashrc: timestamp || py || sizeof || mypc"'
 
 # editor
 export EDITOR=vim

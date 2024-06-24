@@ -62,6 +62,7 @@ $DNF_INSTALL libheif
 #$DNF_INSTALL rust
 #$DNF_INSTALL gnome-extensions-app
 $DNF_INSTALL vlc
+$DNF_INSTALL neofetch
 #$DNF_INSTALL gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 #$DNF_INSTALL lame\* --exclude=lame-devel
 
